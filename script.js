@@ -1,16 +1,11 @@
 let box = document.querySelector('#box')
 let btn = document.querySelector('button')
 
-let play = false
 btn.addEventListener('click', function () {
-    if (play === false) {
-        box.style.animationName = 'rotate'
-        btn.innerHTML = 'pause'
-        play = true
-    }else{
-         box.style.animationName = ''
-        btn.innerHTML = 'play'
-        play = false
-    }
+    let c1 = Math.floor(Math.random()*256)
+    let c2 = Math.floor(Math.random()*256)
+    let c3 = Math.floor(Math.random()*256)
+    
+    box.style.backgroundColor = `rgb(${c1},${c2},${c3})`
 
 })
